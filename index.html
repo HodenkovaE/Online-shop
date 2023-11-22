@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин электроинструментов BOSCH</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="container nav">
+        <li>
+          <img src="img/logo.png" alt="логотип магазина">
+        </li>
+        <li>
+          <div class="site-search">
+            <img src="img/search.png" alt="поиск">
+            <input type="search" id="search-input">
+            <button type="button" id="search-btn" class="fa fa-search"> </i>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <div class="filters">
+      <div class="filters-sort">
+        <label for="sort">Сортировка:</label>
+        <select name="sort" id="sort">
+          <option selected value="alphabet">По алфавиту</option>
+          <option value="expensive">Сначала дорогие</option>
+          <option value="cheap">Сначала дешевые</option>
+          <option value="rating">Рейтинг</option>
+        </select>
+      </div>
+      <a href="#contacts" class="contacts">Контакты <i class="fa fa-phone"></i></a>
+    </div>
+    <section id="shop-items">
+    </section>
+    <p id="nothing-found">Ничего не найдено</p>
+  </main>
+  <footer id="contacts" class="container">
+    <ul class="direction">
+      <li> <a href="tel:+37529219333" aria-label="Позвонить по телефону">+375292193333</a>
+      </li>
+      <li> <a href="mailto:zakaz@instrument-opt.by" aria-label="Написать письмо"> zakaz@instrument-opt.by</a></li>
+    </ul>
+    <p>Мы открыты ежедневно c 9:00 до 17:00</p>
+  </footer>
+  <template id="item-template">
+    <div class="shop-item">
+      <img src="">
+      <div class="content">
+        <div class="tags"></div>
+        <h1></h1>
+        <p></p>
+        <span class="title"></span>
+      </div>
+      <div class="footer">
+        <span class="price"></span>
+        <div class="rating"></div>
+        <button onclick="addToCart()" class="button">Добавить в корзину</button>
+      </div>
+    </div>
+  </template>
+  <script src="script.js"></script>
+</body>
+
+</html>
